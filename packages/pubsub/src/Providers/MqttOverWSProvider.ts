@@ -207,7 +207,7 @@ export class MqttOverWSProvider extends AbstractPubSubProvider {
 					matchedTopicObservers.push(observerForTopic);
 				}
 			});
-			const parsedMessage = JSON.parse(msg);
+			const parsedMessage = msg; //JSON.parse(msg);
 
 			if (typeof parsedMessage === 'object') {
 				parsedMessage[topicSymbol] = topic;
